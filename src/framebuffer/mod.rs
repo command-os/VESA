@@ -36,13 +36,12 @@ impl Framebuffer {
         if x > self.width || y > self.height {
             Err("x and/or y are out of screen bounds")
         } else {
-            unsafe { self.base.add(x).add(self.pitch * y).write(colour) }
+            unsafe { self.base.add(x).add(self.pitch * y).write_volatile(colour) }
 
             Ok(())
         }
     }
 
-    #[inline]
     pub fn clear(&self, colour: u32) -> Result<(), &'static str> {
         for y in 0..(self.height) {
             for x in 0..(self.width) {
