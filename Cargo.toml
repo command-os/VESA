@@ -1,0 +1,18 @@
+[package]
+name = "vesa"
+description = "Firework frame-buffer implementation crate"
+repository = "https://github.com/Firework-OS/VESA"
+keywords = ["firework", "vesa", "frame-buffer"]
+categories = ["no-std"]
+version = "0.1.0"
+authors = ["VisualDevelopment"]
+edition = "2021"
+license-file = "LICENSE"
+
+[profile.dev]
+lto = "thin"
+
+[profile.release]
+lto = true
+
+[dependencies]
