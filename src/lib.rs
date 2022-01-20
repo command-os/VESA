@@ -6,5 +6,5 @@
 #![no_std]
 #![deny(warnings, clippy::cargo, unused_extern_crates, rust_2021_compatibility)]
 
-pub mod pixel;
 pub mod framebuffer;
+pub mod pixel;
