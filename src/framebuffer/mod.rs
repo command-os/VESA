@@ -32,6 +32,16 @@ impl Framebuffer {
     }
 
     #[inline]
+    pub fn clear(&self, colour: u32) -> Result<(), &'static str> {
+        let colour = ((colour as u64) << 32) | colour as u64;
+        for i in 0..((self.height * self.pitch + 1) / 2) {
+            unsafe { (self.base as *mut u64).add(i).write_volatile(colour) }
+        }
+
+        Ok(())
+    }
+
+    #[inline]
     pub fn draw_pixel(&self, x: usize, y: usize, colour: u32) -> Result<(), &'static str> {
         if x > self.width || y > self.height {
             Err("x and/or y are out of screen bounds")
@@ -40,15 +50,5 @@ impl Framebuffer {
 
             Ok(())
         }
-    }
-
-    pub fn clear(&self, colour: u32) -> Result<(), &'static str> {
-        for y in 0..(self.height) {
-            for x in 0..(self.width) {
-                self.draw_pixel(x, y, colour)?;
-            }
-        }
-
-        Ok(())
     }
 }
