@@ -1,7 +1,7 @@
 //! Copyright (c) VisualDevelopment 2021-2022.
 //! This project is licensed by the Creative Commons Attribution-NoCommercial-NoDerivatives licence.
 
-#[derive(Debug, Default, PartialEq, Clone, Copy)]
+#[derive(Debug, Default, PartialEq, Eq, Clone, Copy)]
 pub struct Bitmask {
     pub r: u32,
     pub g: u32,
@@ -9,7 +9,7 @@ pub struct Bitmask {
     pub a: u32,
 }
 
-#[derive(Debug, Default, PartialEq, Clone, Copy)]
+#[derive(Debug, Default, PartialEq, Eq, Clone, Copy)]
 pub struct Colour {
     pub r: u8,
     pub g: u8,

@@ -3,7 +3,7 @@
 
 pub mod shapes;
 
-#[derive(Debug, PartialEq, Clone, Copy)]
+#[derive(Debug, PartialEq, Eq, Clone, Copy)]
 pub struct Framebuffer {
     pub base: *mut u32,
     pub width: usize,
