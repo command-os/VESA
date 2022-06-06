@@ -15,11 +15,11 @@ impl crate::framebuffer::Framebuffer {
         } else {
             if horizontal {
                 for i in 0..len {
-                    self.draw_pixel(x + i, y, colour)?
+                    self.plot_pixel(x + i, y, colour)?
                 }
             } else {
                 for i in 0..len {
-                    self.draw_pixel(x, y + i, colour)?
+                    self.plot_pixel(x, y + i, colour)?
                 }
             }
 

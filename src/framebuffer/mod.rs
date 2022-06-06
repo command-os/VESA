@@ -40,7 +40,7 @@ impl Framebuffer {
     }
 
     #[inline]
-    pub fn draw_pixel(&self, x: usize, y: usize, colour: u32) -> Result<(), &'static str> {
+    pub fn plot_pixel(&self, x: usize, y: usize, colour: u32) -> Result<(), &'static str> {
         if x > self.width || y > self.height {
             Err("x and/or y are out of screen bounds")
         } else {
