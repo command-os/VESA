@@ -4,7 +4,7 @@
 #[test]
 pub fn color_rgba() {
     assert_eq!(
-        vesa::pixel::Colour::new(0xFF, 0xAB, 0xCD, 0x54).to_u32(vesa::pixel::Bitmask {
+        paper_fb::pixel::Colour::new(0xFF, 0xAB, 0xCD, 0x54).to_u32(paper_fb::pixel::Bitmask {
             r: 0xFF000000,
             g: 0x00FF0000,
             b: 0x0000FF00,
@@ -17,7 +17,7 @@ pub fn color_rgba() {
 #[test]
 pub fn color_bgra() {
     assert_eq!(
-        vesa::pixel::Colour::new(0xFF, 0xAB, 0xCD, 0x54).to_u32(vesa::pixel::Bitmask {
+        paper_fb::pixel::Colour::new(0xFF, 0xAB, 0xCD, 0x54).to_u32(paper_fb::pixel::Bitmask {
             r: 0x0000FF00,
             g: 0x00FF0000,
             b: 0xFF000000,
