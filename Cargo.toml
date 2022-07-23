@@ -1,11 +1,11 @@
 [package]
-name = "vesa"
-description = "Firework frame-buffer implementation crate"
+name = "paper_fb"
+description = "The BoxOS frame-buffer implementation crate"
 repository = "https://github.com/Firework-OS/VESA"
 keywords = ["firework", "vesa", "frame-buffer"]
 categories = ["no-std"]
 version = "0.1.0"
-authors = ["VisualDevelopment"]
+authors = ["ChefKiss Inc"]
 edition = "2021"
 license-file = "LICENSE"
 
